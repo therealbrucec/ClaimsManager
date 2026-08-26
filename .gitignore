@@ -1,0 +1,50 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ---------------------------------------------------------------------------
+# The application's own runtime data.
+#
+# Claims Manager keeps its database, document store and demo accounts file in
+# the same folder as the executable. In a normal build that is bin\Debug or
+# bin\Release, already covered above - but these patterns catch the case where
+# somebody runs a copy from the repository root.
+#
+# demo-accounts.csv holds a password. It is a fictional one, shared across five
+# invented accounts, but a credentials file in version control is a habit worth
+# not forming, and secret scanners will flag it.
+# ---------------------------------------------------------------------------
+Claims.mdb
+Claims.ldb
+Claims.laccdb
+Documents/
+demo-accounts.csv
+write-probe-*.tmp
+
+# Installer output. The MSI is a build artefact; publish releases instead.
+Installer/*.msi
+Installer/*.wixpdb
+Installer/*.wixobj
+Installer/*.cab
+
+# A pre-seeded database for the optional PreSeededDatabase component is a local
+# convenience, not something to version.
+Installer/Claims.mdb
+
+# Report exports, if anyone saves them into the tree
+*.xlsx
+*.xls
+
+# Misc
+*.orig
+*.bak
+*.log
+Thumbs.db
+desktop.ini

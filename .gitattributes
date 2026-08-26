@@ -1,0 +1,19 @@
+# Let git normalise text, but keep CRLF for the files Windows tooling insists on.
+* text=auto
+
+*.vb      text eol=crlf
+*.vbproj  text eol=crlf
+*.sln     text eol=crlf
+*.wxs     text eol=crlf
+*.cmd     text eol=crlf
+*.config  text eol=crlf
+
+*.md      text eol=lf
+
+*.ico  binary
+*.png  binary
+*.jpg  binary
+*.mdb  binary
+*.msi  binary
+*.xlsx binary
+*.pptx binary

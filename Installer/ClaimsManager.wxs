@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Northbridge Assurance Claims Manager - installer definition.
+
+  Built with the WiX v4/v5 command line tool. Source paths below are relative to the
+  project root, so build from there (build-msi.cmd does this for you):
+
+      wix build Installer\ClaimsManager.wxs -o Installer\ClaimsManager.msi
+
+  Produces a 32-bit, per-machine MSI. 32-bit is deliberate: the application reaches its
+  Access database through the Jet provider, which exists only as a 32-bit component, so
+  the executable runs as a 32-bit process and belongs under Program Files (x86).
+-->
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+  <?define ProductName = "Claims Manager" ?>
+  <?define Manufacturer = "Northbridge Assurance" ?>
+  <?define ProductVersion = "1.0.0.0" ?>
+
+  <!-- Fixed for the lifetime of the product. Changing it breaks upgrade detection. -->
+  <?define UpgradeCode = "{C8E4A6F2-3B71-4D5E-9A0C-7F2E1D6B4A93}" ?>
+
+  <!--
+    Set explicitly on purpose. Left out, WiX allocates a fresh ProductCode on every build,
+    which is fine for a hand-run install but painful for Intune: the uninstall command and
+    the MSI detection rule both name the ProductCode, so they would need re-entering after
+    every rebuild. Pinning it means a rebuild of the same version is interchangeable with
+    the last one.
+
+    Generate a NEW ProductCode whenever ProductVersion changes. That is what makes it a
+    major upgrade, and MajorUpgrade above then removes the older build. Keeping one code
+    across two versions would turn the second into a reinstall of the first.
+  -->
+  <?define ProductCode = "{8AC2ECD5-CEC0-5248-A807-E9B326123C8A}" ?>
+
+  <Package
+      Name="$(ProductName)"
+      Manufacturer="$(Manufacturer)"
+      Version="$(ProductVersion)"
+      UpgradeCode="$(UpgradeCode)"
+      ProductCode="$(ProductCode)"
+      Scope="perMachine"
+      Compressed="yes">
+
+    <SummaryInformation
+        Description="$(Manufacturer) $(ProductName) - demonstration application" />
+
+    <!-- Replaces an older build in place, so Intune can push a new version over the top. -->
+    <MajorUpgrade
+        AllowSameVersionUpgrades="yes"
+        DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <!--
+      The application targets .NET Framework 4.8, which is part of Windows 10 1903 and
+      later and of Windows 11. This checks that some 4.x is present rather than testing
+      the exact release number, so the condition cannot wrongly block a deployment.
+    -->
+    <Property Id="NETFRAMEWORKFULL">
+      <RegistrySearch
+          Id="FindNetFrameworkFull"
+          Root="HKLM"
+          Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full"
+          Name="Release"
+          Type="raw" />
+    </Property>
+    <Launch
+        Condition="Installed OR NETFRAMEWORKFULL"
+        Message="[ProductName] needs the Microsoft .NET Framework 4.8, which is included with supported versions of Windows." />
+
+    <!-- Used for the Start menu shortcut and the Apps and Features entry. -->
+    <Icon Id="ClaimsManagerIcon" SourceFile="Resources\ClaimsManager.ico" />
+    <Property Id="ARPPRODUCTICON" Value="ClaimsManagerIcon" />
+    <Property Id="ARPNOREPAIR" Value="1" />
+    <Property Id="ARPNOMODIFY" Value="1" />
+
+    <StandardDirectory Id="ProgramFilesFolder">
+      <Directory Id="ManufacturerFolder" Name="$(Manufacturer)">
+        <Directory Id="INSTALLFOLDER" Name="$(ProductName)" />
+      </Directory>
+    </StandardDirectory>
+
+    <!-- Referencing this makes the All Users Start menu available to the shortcut below. -->
+    <StandardDirectory Id="ProgramMenuFolder" />
+
+    <Feature Id="Main" Title="$(ProductName)" Level="1">
+      <ComponentRef Id="ApplicationFiles" />
+      <ComponentRef Id="InstallFolderWritable" />
+    </Feature>
+
+  </Package>
+
+  <Fragment>
+    <!--
+      One component: the executable, with the Start menu shortcut hanging off it. Keeping
+      the shortcut in the same component as its target means the file is the key path and
+      the shortcut is removed cleanly on uninstall.
+
+      The shortcut sits directly in ProgramMenuFolder rather than in a subfolder, so it
+      appears in the Windows All apps list as a single "Claims Manager" entry rather than
+      as a folder to expand.
+    -->
+    <Component Id="ApplicationFiles" Directory="INSTALLFOLDER">
+      <File Id="ClaimsManagerExe" Source="bin\Release\ClaimsManager.exe" KeyPath="yes">
+        <Shortcut
+            Id="StartMenuShortcut"
+            Directory="ProgramMenuFolder"
+            Name="$(ProductName)"
+            Description="$(Manufacturer) claims handling desk - demonstration application"
+            WorkingDirectory="INSTALLFOLDER"
+            Icon="ClaimsManagerIcon"
+            Advertise="no" />
+      </File>
+    </Component>
+    <!--
+      The application keeps its database, document store and demo accounts file in its own
+      folder rather than in the user profile, so that folder has to be writable by whoever
+      runs it. Program Files is not, for a standard user, hence this grant.
+
+      PermissionEx is part of the core WiX schema and writes the MsiLockPermissionsEx table,
+      so no WiX extension is needed. That table needs Windows Installer 5.0, which means
+      Windows 7 or later - not a constraint worth worrying about here.
+
+      The SDDL sets the whole DACL rather than adding to it, so all three entries have to be
+      spelled out or the folder would end up locked down:
+        SY  Local System         full control
+        BA  Administrators       full control
+        BU  Users                modify (0x1301BF)
+      OICI makes each entry inheritable by the files and folders created underneath.
+
+      The explicit Guid is required, not decoration: this component's key path is a directory
+      rather than a file, and WiX will not generate a GUID automatically for those. It must
+      stay exactly as it is, because changing a component GUID between versions breaks
+      Windows Installer's component rules on upgrade.
+
+      Be clear-eyed about it: giving Users write access inside Program Files is something you
+      would never do for a real product, because anyone who can write next to an executable
+      can influence what it loads. It is acceptable here only because this is a demonstration
+      application holding invented data. If that trade is unwelcome, install somewhere users
+      can already write - change ProgramFilesFolder above - and drop this component.
+    -->
+    <Component Id="InstallFolderWritable" Directory="INSTALLFOLDER"
+               Guid="{E0284CCF-9408-594C-B051-DCF88B6CB83F}">
+      <CreateFolder>
+        <PermissionEx Sddl="D:(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)(A;OICI;0x1301bf;;;BU)" />
+      </CreateFolder>
+    </Component>
+
+    <!--
+      OPTIONAL: ship a ready made database.
+
+      Normally Claims.mdb is generated on first run, which takes a few seconds. Where the
+      machine is short lived, a pooled Cloud PC for Agents being the obvious case, that cost
+      is paid at the start of every session. Including a prebuilt database avoids it.
+
+      To use this:
+        1. Run the application once on a Windows machine and let it build its database.
+        2. Copy the resulting Claims.mdb into this Installer folder.
+        3. Uncomment the component below and add a ComponentRef for it to the Feature above.
+
+      Two consequences worth knowing. Windows Installer will own the file, so a repair or an
+      upgrade replaces it and any claims worked on during a demo are discarded, which for a
+      demo is usually the point. And uninstall will remove it, unlike the copy the
+      application creates for itself.
+
+      The generator is seeded with a fixed number, so a prebuilt database is identical to
+      one generated on the machine. This is purely about start up time.
+
+    <Component Id="PreSeededDatabase" Directory="INSTALLFOLDER">
+      <File Id="ClaimsDatabase" Source="Installer\Claims.mdb" KeyPath="yes" />
+    </Component>
+    -->
+  </Fragment>
+
+</Wix>

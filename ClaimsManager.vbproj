@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1B2C3D4-1111-4222-8333-ABCDEF012345}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ClaimsManager</RootNamespace>
+    <AssemblyName>ClaimsManager</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Empty</MyType>
+    <StartupObject>ClaimsManager.Program</StartupObject>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>On</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <ApplicationIcon>Resources\ClaimsManager.ico</ApplicationIcon>
+  </PropertyGroup>
+  <!-- Jet 4.0 is a 32-bit provider. AnyCPU + Prefer32Bit makes the process 32-bit
+       on 64-bit Windows, which is what lets Microsoft.Jet.OLEDB.4.0 load at all. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <!-- Project-level imports. The source files rely on these being implicit,
+       exactly as a VB WinForms project template would provide them. -->
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.vb" />
+    <Compile Include="Core\AppIcon.vb" />
+    <Compile Include="Core\ClaimWorkflow.vb" />
+    <Compile Include="Core\Config.vb" />
+    <Compile Include="Core\DocumentStore.vb" />
+    <Compile Include="Core\ExcelReport.vb" />
+    <Compile Include="Core\RolePermissions.vb" />
+    <Compile Include="Core\Session.vb" />
+    <Compile Include="Core\TextHints.vb" />
+    <Compile Include="Core\UiStyle.vb" />
+    <Compile Include="Models\Entities.vb" />
+    <Compile Include="Models\Enums.vb" />
+    <Compile Include="Data\Db.vb" />
+    <Compile Include="Data\DbInitializer.vb" />
+    <Compile Include="Data\DemoData.vb" />
+    <Compile Include="Repositories\AttachmentRepository.vb" />
+    <Compile Include="Repositories\ClaimRepository.vb" />
+    <Compile Include="Repositories\CorrespondenceRepository.vb" />
+    <Compile Include="Repositories\ReportRepository.vb" />
+    <Compile Include="Repositories\SupportRepositories.vb" />
+    <Compile Include="Forms\frmClaim.Designer.vb">
+      <DependentUpon>frmClaim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClaim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmClaimList.Designer.vb">
+      <DependentUpon>frmClaimList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmClaimList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmIntake.Designer.vb">
+      <DependentUpon>frmIntake.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmIntake.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMatchClaim.Designer.vb">
+      <DependentUpon>frmMatchClaim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMatchClaim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReports.Designer.vb">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSplash.Designer.vb">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransition.Designer.vb">
+      <DependentUpon>frmTransition.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUnmatched.Designer.vb">
+      <DependentUpon>frmUnmatched.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUnmatched.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\NorthbridgeAssurance.png" />
+    <EmbeddedResource Include="Resources\ClaimsManager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Installer\ClaimsManager.wxs" />
+    <None Include="Installer\build-msi.cmd" />
+    <None Include="README.md" />
+    <None Include="CLAUDE.md" />
+    <None Include=".gitignore" />
+    <None Include="Tests\*.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
