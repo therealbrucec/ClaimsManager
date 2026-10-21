@@ -39,6 +39,14 @@ Public Module Config
         End Get
     End Property
 
+    ''' <summary>The compiled HTML Help file, built from Help\ and installed beside the
+    ''' executable. Read-only, so it is the one file here that needs no write access.</summary>
+    Public ReadOnly Property HelpFilePath As String
+        Get
+            Return Path.Combine(DataFolder, "ClaimsManager.chm")
+        End Get
+    End Property
+
     Public ReadOnly Property ConnectionString As String
         Get
             Return "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & DatabasePath & ";"

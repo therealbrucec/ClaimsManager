@@ -32,6 +32,7 @@ Public Class frmClaim
     Public Sub New(claimId As Integer)
         InitializeComponent()
         UiStyle.ApplyTo(Me)
+        AppHelp.Attach(Me, AddressOf HelpTopicForTab)
         StyleGrids()
 
         _claim = ClaimRepository.GetById(claimId)
@@ -44,11 +45,23 @@ Public Class frmClaim
     Public Sub New(prefillFrom As Correspondence)
         InitializeComponent()
         UiStyle.ApplyTo(Me)
+        AppHelp.Attach(Me, AddressOf HelpTopicForTab)
         StyleGrids()
 
         _claim = New Claim()
         _prefill = prefillFrom
     End Sub
+
+    ''' <summary>F1 opens the help for whichever tab is showing.</summary>
+    Private Function HelpTopicForTab() As String
+        Dim showing As TabPage = tabClaim.SelectedTab
+        If showing Is tabCorrespondence Then Return AppHelp.ClaimCorrespondence
+        If showing Is tabDocuments Then Return AppHelp.ClaimDocuments
+        If showing Is tabNotes Then Return AppHelp.ClaimNotes
+        If showing Is tabPayments Then Return AppHelp.ClaimPayments
+        If showing Is tabHistory Then Return AppHelp.ClaimHistory
+        Return AppHelp.ClaimDetails
+    End Function
 
     Private Sub StyleGrids()
         UiStyle.StyleGrid(dgvCorrespondence)

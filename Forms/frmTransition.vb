@@ -23,6 +23,7 @@ Public Class frmTransition
     Public Sub New(fromStatus As String, transition As WorkflowTransition)
         InitializeComponent()
         UiStyle.ApplyTo(Me)
+        AppHelp.Attach(Me, AppHelp.MovingAClaim)
 
         _fromStatus = If(fromStatus, String.Empty)
         _transition = If(transition, New WorkflowTransition())

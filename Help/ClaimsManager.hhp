@@ -1,0 +1,42 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=ClaimsManager.chm
+Contents file=contents.hhc
+Default Font=Tahoma,8,0
+Default topic=welcome.htm
+Default Window=main
+Display compile progress=No
+Index file=index.hhk
+Language=0x809 English (United Kingdom)
+Title=Claims Manager Help
+
+[WINDOWS]
+main="Claims Manager Help","contents.hhc","index.hhk","welcome.htm","welcome.htm",,,,,0x40120,260,0x384e,[60,40,900,700],,,,,,,0
+
+[FILES]
+welcome.htm
+signing-in.htm
+main-window.htm
+roles.htm
+record-inbound.htm
+intake-queue.htm
+new-or-existing.htm
+claim-lists.htm
+claim-window.htm
+claim-details.htm
+claim-correspondence.htm
+claim-documents.htm
+claim-notes.htm
+claim-payments.htm
+claim-history.htm
+workflow.htm
+moving-a-claim.htm
+transitions.htm
+guards.htm
+adjuster-review.htm
+reports.htm
+report-figures.htm
+keyboard.htm
+glossary.htm
+data-files.htm
+troubleshooting.htm

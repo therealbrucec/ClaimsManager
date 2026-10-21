@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New claim or existing claim?</title>
+<link rel="stylesheet" type="text/css" href="help.css">
+</head>
+<body>
+<div class="banner">
+<div class="product">Northbridge Assurance Claims Manager</div>
+<h1>New claim or existing claim?</h1>
+</div>
+<div class="content">
+
+<p>This is the decision the whole desk turns on: is an inbound item a new loss, or more paper for
+a claim already open? Filing it against the wrong claim, or opening a second claim for the same
+loss, causes trouble for everyone downstream. Claims Manager searches for likely matches and
+shows you what it found, but <b>you</b> make the call.</p>
+
+<p>The <span class="ui">New claim or existing claim?</span> window opens when you click
+<span class="ui">Save and find claim</span> while recording an item, or
+<span class="ui">Find claim for this item</span> in the intake queue.</p>
+
+<h2>How the search is filled in</h2>
+<p>The top of the window shows the item you are filing. Claims Manager reads its subject and
+text and fills in the search for you. A grey line under the search says what it found and where
+from.</p>
+<ul>
+<li>A <b>claim reference</b> in the text, such as <code>CLM-2026-00042</code>, is as close to
+certain as this gets. The search uses that claim's policy number.</li>
+<li>Otherwise, the first thing that looks like a <b>policy number</b>, such as
+<code>NGC/884213</code>, goes into <span class="ui">Policy no</span>.</li>
+<li>The sender's <b>surname</b> goes into <span class="ui">Insured</span>.</li>
+<li>The earliest <b>date</b> in the text, read day first (31/01/2026), goes into
+<span class="ui">Date of loss</span>.</li>
+</ul>
+<p>These are hints only. Change any of them and click <span class="ui">Search</span> again.</p>
+
+<h2>How matches are found</h2>
+<p>The search is deliberately generous. A claim is listed if <b>any</b> of these is true:</p>
+<ul>
+<li>its policy number contains what is in <span class="ui">Policy no</span>. The digits alone are
+also tried, so <code>NGC884213</code> still finds <code>NGC/884213</code>;</li>
+<li>its insured name contains what is in <span class="ui">Insured</span>;</li>
+<li>with <span class="ui">Date of loss</span> ticked, its date of loss falls within the number of
+days either side given in <span class="ui">+/- days</span> (7 unless you change it).</li>
+</ul>
+<p>It is better to be shown four possible claims and rule three out than to miss the right one
+and open a duplicate. Double-click a claim in the list to open it and check before you decide.</p>
+
+<h3 class="procedure"><span class="arrow">4</span> To file the item against an existing claim</h3>
+<ol>
+<li>Select the claim in the list.</li>
+<li>Click <span class="ui">Attach to selected claim</span>, then <span class="ui">Yes</span> to
+confirm. Any files that came with the item are moved into that claim's folder.</li>
+<li>Click <span class="ui">Yes</span> if you want to open the claim now.</li>
+</ol>
+
+<h3 class="procedure"><span class="arrow">4</span> To open a new claim from the item</h3>
+<ol>
+<li>Click <span class="ui">Create new claim from this item</span>. If there are possible matches
+in the list, Claims Manager asks you to confirm that this really is a new loss.</li>
+<li>A new claim opens, already filled in from the item: the sender as the insured, the received
+date as the date notified, the text as the description of what happened, the sender's email
+address or telephone number, and any policy number and date of loss found in the text. You are
+made the handler.</li>
+<li>Complete anything else you know and click <span class="ui">Save claim</span>. The claim is
+given its reference, the item is filed against it, and the claim opens.</li>
+</ol>
+
+<p>Only handlers and supervisors can file items or open new claims.</p>
+
+<h4 class="related">Related topics</h4>
+<ul class="related">
+<li><a href="intake-queue.htm">The intake queue</a></li>
+<li><a href="claim-details.htm">Details tab</a></li>
+<li><a href="claim-lists.htm">Finding a claim</a></li>
+</ul>
+
+</div>
+<div class="footer">Northbridge Assurance Claims Manager Help</div>
+</body>
+</html>

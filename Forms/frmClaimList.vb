@@ -20,6 +20,8 @@ Public Class frmClaimList
     Public Sub New(title As String, mode As ClaimListMode, userId As Integer?)
         InitializeComponent()
         UiStyle.ApplyTo(Me)
+        AppHelp.Attach(Me, Function() If(_mode = ClaimListMode.AdjusterQueue,
+                                         AppHelp.AdjusterReview, AppHelp.ClaimLists))
         UiStyle.StyleGrid(dgvClaims)
 
         _mode = mode

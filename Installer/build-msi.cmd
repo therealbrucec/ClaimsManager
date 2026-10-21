@@ -142,9 +142,9 @@ echo   Installer        : Installer\ClaimsManager.msi
 echo.
 echo === For Intune ===
 echo   Install command   : msiexec /i "ClaimsManager.msi" /qn /norestart
-echo   Uninstall command : msiexec /x "{8AC2ECD5-CEC0-5248-A807-E9B326123C8A}" /qn /norestart
+echo   Uninstall command : msiexec /x "{C7782104-92E8-41CD-AEC4-1B4F46B8E184}" /qn /norestart
 echo   Install behaviour : System
-echo   Detection rule    : MSI, product code {8AC2ECD5-CEC0-5248-A807-E9B326123C8A}
+echo   Detection rule    : MSI, product code {C7782104-92E8-41CD-AEC4-1B4F46B8E184}
 echo   Applicable OS     : 64-bit (the package itself is 32-bit, which is intended)
 echo.
 echo   The product code is pinned in ClaimsManager.wxs, so it survives a rebuild.

@@ -8,6 +8,7 @@ Public Class frmReports
     Public Sub New()
         InitializeComponent()
         UiStyle.ApplyTo(Me)
+        AppHelp.Attach(Me, AppHelp.Reports)
     End Sub
 
     Private Sub frmReports_Load(sender As Object, e As EventArgs) Handles MyBase.Load

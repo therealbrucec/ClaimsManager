@@ -1,0 +1,741 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="access keys">
+      <param name="Local" value="keyboard.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="adjuster">
+      <param name="Local" value="adjuster-review.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="approving a claim">
+        <param name="Local" value="adjuster-review.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="assigning">
+        <param name="Local" value="claim-details.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="referring a claim to">
+        <param name="Name" value="Moving a claim on">
+        <param name="Local" value="moving-a-claim.htm">
+        <param name="Name" value="Before a claim can move on">
+        <param name="Local" value="guards.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="rejecting a claim">
+        <param name="Local" value="adjuster-review.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="review queue">
+        <param name="Local" value="adjuster-review.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="role">
+        <param name="Local" value="roles.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Adjuster Approved">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Adjuster Rejected">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      <param name="Name" value="Finding a claim">
+      <param name="Local" value="claim-lists.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="All claims">
+      <param name="Local" value="claim-lists.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="approving a claim">
+      <param name="Local" value="adjuster-review.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="attachments">
+      <param name="Local" value="claim-documents.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="on a claim">
+        <param name="Local" value="claim-documents.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="on an inbound item">
+        <param name="Name" value="Recording an inbound item">
+        <param name="Local" value="record-inbound.htm">
+        <param name="Name" value="Correspondence tab">
+        <param name="Local" value="claim-correspondence.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="opening">
+        <param name="Name" value="Documents tab">
+        <param name="Local" value="claim-documents.htm">
+        <param name="Name" value="The intake queue">
+        <param name="Local" value="intake-queue.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="audit trail">
+      <param name="Local" value="claim-history.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="claim reference">
+      <param name="Local" value="glossary.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="format">
+        <param name="Local" value="glossary.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="opening a claim by">
+        <param name="Local" value="claim-lists.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="recognised in text">
+        <param name="Local" value="new-or-existing.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="claim window">
+      <param name="Local" value="claim-window.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="claims">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="closing">
+        <param name="Local" value="transitions.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="finding">
+        <param name="Local" value="claim-lists.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="new">
+        <param name="Name" value="New claim or existing claim?">
+        <param name="Local" value="new-or-existing.htm">
+        <param name="Name" value="The claim window">
+        <param name="Local" value="claim-window.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="opening">
+        <param name="Local" value="claim-lists.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="statuses">
+        <param name="Local" value="workflow.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="withdrawing">
+        <param name="Local" value="transitions.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Closed">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="colours of statuses">
+      <param name="Local" value="claim-lists.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="concluded claims">
+      <param name="Name" value="Understanding the report figures">
+      <param name="Local" value="report-figures.htm">
+      <param name="Name" value="Glossary">
+      <param name="Local" value="glossary.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Confirm decision">
+      <param name="Local" value="moving-a-claim.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Correspondence tab">
+      <param name="Local" value="claim-correspondence.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="CSV file">
+      <param name="Name" value="Exporting reports">
+      <param name="Local" value="reports.htm">
+      <param name="Name" value="Troubleshooting">
+      <param name="Local" value="troubleshooting.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="CTRL+I">
+      <param name="Local" value="keyboard.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="CTRL+N">
+      <param name="Local" value="keyboard.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="data">
+      <param name="Local" value="data-files.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="resetting">
+        <param name="Local" value="data-files.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="where it is kept">
+        <param name="Local" value="data-files.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="database">
+      <param name="Name" value="Where your data is kept">
+      <param name="Local" value="data-files.htm">
+      <param name="Name" value="Troubleshooting">
+      <param name="Local" value="troubleshooting.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="date notified">
+      <param name="Name" value="Details tab">
+      <param name="Local" value="claim-details.htm">
+      <param name="Name" value="Glossary">
+      <param name="Local" value="glossary.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="date of loss">
+      <param name="Name" value="Details tab">
+      <param name="Local" value="claim-details.htm">
+      <param name="Name" value="Before a claim can move on">
+      <param name="Local" value="guards.htm">
+      <param name="Name" value="Glossary">
+      <param name="Local" value="glossary.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="demo-accounts.csv">
+      <param name="Name" value="Signing in">
+      <param name="Local" value="signing-in.htm">
+      <param name="Name" value="Where your data is kept">
+      <param name="Local" value="data-files.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="demonstration data">
+      <param name="Local" value="data-files.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Details tab">
+      <param name="Local" value="claim-details.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="documents">
+      <param name="Local" value="claim-documents.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="adding">
+        <param name="Local" value="claim-documents.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="document store">
+        <param name="Name" value="Where your data is kept">
+        <param name="Local" value="data-files.htm">
+        <param name="Name" value="Glossary">
+        <param name="Local" value="glossary.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="removing">
+        <param name="Local" value="claim-documents.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Documents Pending">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="duplicate claims">
+      <param name="Local" value="new-or-existing.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="email">
+      <param name="Local" value="record-inbound.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="recording">
+        <param name="Local" value="record-inbound.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="estimated value">
+      <param name="Name" value="Details tab">
+      <param name="Local" value="claim-details.htm">
+      <param name="Name" value="Before a claim can move on">
+      <param name="Local" value="guards.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Excel">
+      <param name="Local" value="reports.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="not installed">
+        <param name="Name" value="Exporting reports">
+        <param name="Local" value="reports.htm">
+        <param name="Name" value="Troubleshooting">
+        <param name="Local" value="troubleshooting.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="reports">
+        <param name="Local" value="reports.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="F1">
+      <param name="Name" value="Welcome to Claims Manager">
+      <param name="Local" value="welcome.htm">
+      <param name="Name" value="Keyboard shortcuts">
+      <param name="Local" value="keyboard.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="fax">
+      <param name="Local" value="record-inbound.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="recording">
+        <param name="Local" value="record-inbound.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="fees">
+      <param name="Local" value="claim-payments.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="frequency report">
+      <param name="Name" value="Exporting reports">
+      <param name="Local" value="reports.htm">
+      <param name="Name" value="Understanding the report figures">
+      <param name="Local" value="report-figures.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="glossary">
+      <param name="Local" value="glossary.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="handler">
+      <param name="Local" value="claim-details.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="assigning">
+        <param name="Local" value="claim-details.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="role">
+        <param name="Local" value="roles.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="help">
+      <param name="Local" value="welcome.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="using">
+        <param name="Local" value="welcome.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="will not display">
+        <param name="Local" value="troubleshooting.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="History tab">
+      <param name="Local" value="claim-history.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="inbound item">
+      <param name="Local" value="new-or-existing.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="filing against a claim">
+        <param name="Local" value="new-or-existing.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="recording">
+        <param name="Local" value="record-inbound.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="intake queue">
+      <param name="Local" value="intake-queue.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="interim payment">
+      <param name="Local" value="claim-payments.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Jet database provider">
+      <param name="Local" value="troubleshooting.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="keyboard shortcuts">
+      <param name="Local" value="keyboard.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="letters">
+      <param name="Local" value="record-inbound.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="recording">
+        <param name="Local" value="record-inbound.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="main window">
+      <param name="Local" value="main-window.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="matching an item to a claim">
+      <param name="Local" value="new-or-existing.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="menus">
+      <param name="Local" value="main-window.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Move claim on">
+      <param name="Name" value="Moving a claim on">
+      <param name="Local" value="moving-a-claim.htm">
+      <param name="Name" value="The claim window">
+      <param name="Local" value="claim-window.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="My claims">
+      <param name="Local" value="claim-lists.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="net paid">
+      <param name="Local" value="claim-payments.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="No action available">
+      <param name="Local" value="moving-a-claim.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="notes">
+      <param name="Local" value="claim-notes.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="internal">
+        <param name="Local" value="claim-notes.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Notes tab">
+      <param name="Local" value="claim-notes.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Notified">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Open claims only">
+      <param name="Local" value="claim-lists.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="password">
+      <param name="Local" value="signing-in.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="payments">
+      <param name="Local" value="claim-payments.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="recording">
+        <param name="Local" value="claim-payments.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="reversing">
+        <param name="Local" value="claim-payments.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Payments tab">
+      <param name="Local" value="claim-payments.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="peril">
+      <param name="Name" value="Details tab">
+      <param name="Local" value="claim-details.htm">
+      <param name="Name" value="Before a claim can move on">
+      <param name="Local" value="guards.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="permissions">
+      <param name="Local" value="roles.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="phone calls">
+      <param name="Local" value="record-inbound.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="recording">
+        <param name="Local" value="record-inbound.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="policy number">
+      <param name="Local" value="claim-details.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="entering">
+        <param name="Local" value="claim-details.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="searching by">
+        <param name="Name" value="New claim or existing claim?">
+        <param name="Local" value="new-or-existing.htm">
+        <param name="Name" value="Finding a claim">
+        <param name="Local" value="claim-lists.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="post">
+      <param name="Local" value="record-inbound.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="recording">
+        <param name="Local" value="record-inbound.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="reasons for decisions">
+      <param name="Name" value="Moving a claim on">
+      <param name="Local" value="moving-a-claim.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="recovery">
+      <param name="Local" value="claim-payments.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Referred For Info">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Reviewing a claim as an adjuster">
+      <param name="Local" value="adjuster-review.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="rejecting a claim">
+      <param name="Local" value="adjuster-review.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="reopening a claim">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      <param name="Name" value="Roles and what they may do">
+      <param name="Local" value="roles.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="reports">
+      <param name="Local" value="reports.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="exporting">
+        <param name="Local" value="reports.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="figures">
+        <param name="Local" value="report-figures.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="reserve">
+      <param name="Name" value="Details tab">
+      <param name="Local" value="claim-details.htm">
+      <param name="Name" value="Before a claim can move on">
+      <param name="Local" value="guards.htm">
+      <param name="Name" value="Payments tab">
+      <param name="Local" value="claim-payments.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="review queue">
+      <param name="Local" value="adjuster-review.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="roles">
+      <param name="Local" value="roles.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="searching for claims">
+      <param name="Name" value="Finding a claim">
+      <param name="Local" value="claim-lists.htm">
+      <param name="Name" value="New claim or existing claim?">
+      <param name="Local" value="new-or-existing.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Sent To Underwriter">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Before a claim can move on">
+      <param name="Local" value="guards.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Settled">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="settlement">
+      <param name="Name" value="Before a claim can move on">
+      <param name="Local" value="guards.htm">
+      <param name="Name" value="Payments tab">
+      <param name="Local" value="claim-payments.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="signing in">
+      <param name="Local" value="signing-in.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="signing out">
+      <param name="Local" value="signing-in.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="status bar">
+      <param name="Local" value="main-window.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="status history">
+      <param name="Local" value="claim-history.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="statuses">
+      <param name="Local" value="moving-a-claim.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="changing">
+        <param name="Local" value="moving-a-claim.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="list of">
+        <param name="Local" value="workflow.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="reference">
+        <param name="Local" value="transitions.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="supervisor">
+      <param name="Name" value="Roles and what they may do">
+      <param name="Local" value="roles.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="toolbar">
+      <param name="Local" value="main-window.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="troubleshooting">
+      <param name="Local" value="troubleshooting.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="underwriter">
+      <param name="Local" value="claim-details.htm">
+      </OBJECT>
+  <UL>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="choosing">
+        <param name="Local" value="claim-details.htm">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+        <param name="Name" value="sending a claim to">
+        <param name="Name" value="Before a claim can move on">
+        <param name="Local" value="guards.htm">
+        <param name="Name" value="Status changes reference">
+        <param name="Local" value="transitions.htm">
+        </OBJECT>
+  </UL>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Underwriter Agreed">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Underwriter Declined">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="unmatched queue">
+      <param name="Local" value="intake-queue.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="user name">
+      <param name="Local" value="signing-in.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="value report">
+      <param name="Name" value="Exporting reports">
+      <param name="Local" value="reports.htm">
+      <param name="Name" value="Understanding the report figures">
+      <param name="Local" value="report-figures.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="With Adjuster">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Before a claim can move on">
+      <param name="Local" value="guards.htm">
+      <param name="Name" value="Reviewing a claim as an adjuster">
+      <param name="Local" value="adjuster-review.htm">
+      </OBJECT>
+  <LI> <OBJECT type="text/sitemap">
+      <param name="Name" value="Withdrawn">
+      <param name="Name" value="Claim statuses">
+      <param name="Local" value="workflow.htm">
+      <param name="Name" value="Status changes reference">
+      <param name="Local" value="transitions.htm">
+      </OBJECT>
+</UL>
+</BODY></HTML>

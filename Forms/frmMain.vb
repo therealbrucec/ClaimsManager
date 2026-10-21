@@ -10,6 +10,7 @@ Public Class frmMain
     Public Sub New()
         InitializeComponent()
         UiStyle.ApplyTo(Me)
+        AppHelp.Attach(Me, AppHelp.MainWindow)
         Instance = Me
     End Sub
 
@@ -209,16 +210,25 @@ Public Class frmMain
         Close()
     End Sub
 
+    Private Sub mnuHelpContents_Click(sender As Object, e As EventArgs) Handles mnuHelpContents.Click
+        AppHelp.ShowContents(Me)
+    End Sub
+
+    Private Sub mnuHelpIndex_Click(sender As Object, e As EventArgs) Handles mnuHelpIndex.Click
+        AppHelp.ShowIndex(Me)
+    End Sub
+
     Private Sub mnuAbout_Click(sender As Object, e As EventArgs) Handles mnuAbout.Click
         Dim detail As String =
             "Northbridge Assurance" & vbCrLf &
             "Claims Manager - broker claims handling desk" & vbCrLf & vbCrLf &
             "Database: " & Config.DatabasePath & vbCrLf &
             "Documents: " & Config.DocumentRoot & vbCrLf &
-            "Sign-in details: " & Config.AccountsFilePath
+            "Sign-in details: " & Config.AccountsFilePath & vbCrLf &
+            "Help: " & Config.HelpFilePath
 
         detail &= vbCrLf & vbCrLf &
-                  "All three sit in the program's own folder. Nothing is written to your profile."
+                  "All of these sit in the program's own folder. Nothing is written to your profile."
 
         MessageBox.Show(Me, detail,
             "About Northbridge Assurance Claims Manager",
