@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Understanding the report figures</title>
+<link rel="stylesheet" type="text/css" href="help.css">
+</head>
+<body>
+<div class="banner">
+<div class="product">Northbridge Assurance Claims Manager</div>
+<h1>Understanding the report figures</h1>
+</div>
+<div class="content">
+
+<p>Both reports have one row for every month in the period, including months with nothing in
+them, so the chart line has no gaps. Claims are placed in a month by their <b>date notified</b>,
+not their date of loss: the reports answer "what came in when".</p>
+
+<h2>Claim value over time</h2>
+<table class="grid">
+<tr><th>Column</th><th>What it shows</th></tr>
+<tr><td>Month</td><td>The month of notification.</td></tr>
+<tr><td>Estimated value</td><td>The total estimated value of the claims notified that month.</td></tr>
+<tr><td>Reserve</td><td>Their total reserve.</td></tr>
+<tr><td>Paid to date</td><td>The total paid on them so far, less recoveries.</td></tr>
+<tr><td>Claims</td><td>How many claims that is.</td></tr>
+</table>
+<p>Only claims at the statuses ticked when the report was run are counted. The chart plots the
+three money columns; the claim count sits beside them, outside the chart, so it cannot flatten
+the money scale.</p>
+
+<h2>Claim frequency by month</h2>
+<table class="grid">
+<tr><th>Column</th><th>What it shows</th></tr>
+<tr><td>Month</td><td>The calendar month.</td></tr>
+<tr><td>Claims notified</td><td>Claims notified that month.</td></tr>
+<tr><td>Claims concluded</td><td>Claims that reached Settled, Closed, Withdrawn, Adjuster Rejected
+or Underwriter Declined that month, taken from the claims' status history.</td></tr>
+<tr><td>Open at month end</td><td>A running total: the claims still open at the end of the
+month.</td></tr>
+</table>
+<p>The running total starts from the number of claims already open when the period began, not
+from nought, so the first month is honest.</p>
+
+<div class="note"><b>Note</b>&nbsp; A claim that concludes, is reopened by a supervisor and
+concludes again is counted in <b>Claims concluded</b> each time.</div>
+
+<h4 class="related">Related topics</h4>
+<ul class="related">
+<li><a href="reports.htm">Exporting reports</a></li>
+<li><a href="claim-payments.htm">Payments tab</a></li>
+</ul>
+
+</div>
+<div class="footer">Northbridge Assurance Claims Manager Help</div>
+</body>
+</html>

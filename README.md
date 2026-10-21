@@ -48,7 +48,8 @@ There are two outputs. The plain executable is unchanged; the installer is addit
 **The executable**
 
 1. Open `ClaimsManager.sln` in Visual Studio 2022.
-2. Target framework is .NET Framework 4.8. Build.
+2. Target framework is .NET Framework 4.8. Build. The build also compiles the help file,
+   `ClaimsManager.chm`, into the same folder; see [Help](#help).
 3. Run `bin\Debug\ClaimsManager.exe`. No installer, no configuration step.
 
 **The installer**
@@ -170,9 +171,9 @@ as a 32-bit process and belongs there.
 | Setting | Value |
 |---|---|
 | Install command | `msiexec /i "ClaimsManager.msi" /qn /norestart` |
-| Uninstall command | `msiexec /x "{8AC2ECD5-CEC0-5248-A807-E9B326123C8A}" /qn /norestart` |
+| Uninstall command | `msiexec /x "{C7782104-92E8-41CD-AEC4-1B4F46B8E184}" /qn /norestart` |
 | Install behaviour | **System** (device context) |
-| Detection rule | MSI product code `{8AC2ECD5-CEC0-5248-A807-E9B326123C8A}` |
+| Detection rule | MSI product code `{C7782104-92E8-41CD-AEC4-1B4F46B8E184}` |
 | Applicable OS architecture | **64-bit** — the package is 32-bit, which is intended and not a mismatch |
 | Minimum OS | Windows 10 1903 or later, for .NET Framework 4.8 |
 | Device restart behaviour | No specific action; nothing here asks for a reboot |
@@ -265,7 +266,11 @@ against the current Microsoft documentation before depending on them.
 - **Installation creates no data.** The database is built the first time somebody runs the
   application, in the install folder. All users of a machine therefore share one book, which for
   a demo is usually what you want. Nothing happens at install time beyond copying the executable
-  and creating the shortcut, so a system-context install has nothing to get wrong.
+  and the help file and creating the shortcut, so a system-context install has nothing to get
+  wrong.
+- **Version 1.1.0.0 added the help file**, and with it a new product code. A machine with 1.0
+  installed is upgraded in place by `MajorUpgrade`, but Intune only knows to do that once the
+  detection rule and uninstall command above carry the new code.
 - **Uninstalling removes the program, not the data.** `Claims.mdb`, `Documents\` and
   `demo-accounts.csv` were created by running the application rather than by the installer, so
   MSI does not know about them and leaves them behind. Delete the folder afterwards if you want
@@ -493,6 +498,41 @@ used for creating the database, so nothing is added to the project references. I
 this kind of report was always produced on a broker's desk. **Excel must be installed.** If it
 is not, the export offers to save the figures as CSV instead, without a chart.
 
+## Help
+
+Press **F1** anywhere and a compiled HTML Help file opens at the topic for the window in front
+of you: the sign-in box, a claim list, the intake queue, the matching screen, the reports
+dialog. On a claim it follows the tab, so F1 on the Payments tab opens the Payments topic.
+`Help > Contents` and `Help > Index` open the same file at its contents tree and its keyword
+index. It is the tri-pane `.chm` viewer every line-of-business application of the period
+shipped, with Contents and Index tabs, Locate, Back, Forward, Home, Print and Options.
+
+The help is a normal **HTML Help Workshop project** in `Help\`: `ClaimsManager.hhp`, a
+`contents.hhc` table of contents, an `index.hhk` keyword index, one `.htm` file per topic and a
+stylesheet. Edit the HTML and rebuild.
+
+**Building it needs nothing installed.** Microsoft no longer distributes HTML Help Workshop, so
+`hhc.exe` cannot be relied on. Instead `Help\BuildChm.vb` is an MSBuild inline task that the
+project runs after every build, and it writes `ClaimsManager.chm` beside the executable. It
+writes the same container format `hhc.exe` did, with two simplifications that make no visible
+difference at this size: the topics are stored rather than compressed, and there is no
+full-text search index, so the viewer shows Contents and Index tabs but no Search tab. The
+build fails if any topic, the contents or the index links to a file that is not there. If you
+do have `hhc.exe`, it compiles the same project.
+
+How F1 finds its topic: each form calls `AppHelp.Attach(Me, topic)` in its constructor, and
+`Core\AppHelp.vb` holds the topic file names. Rename a topic in `Help\` and you must rename it
+there too.
+
+The help describes what the application does, including the status changes, permissions and
+guard conditions. When `ClaimWorkflow` changes, `transitions.htm`, `roles.htm` and
+`guards.htm` need changing with it.
+
+If F1 seems not to work: **Windows will not display help from an untrusted location.** Opened
+from a network share, or from a folder that arrived as a download, the viewer opens but every
+topic says the page cannot be displayed. Run from a local disk, or unblock the `.chm` in its
+Properties.
+
 ## Layout
 
 ```
@@ -508,6 +548,7 @@ Core/
   UiStyle.vb                   the period look, brand colours, grid styling
   ExcelReport.vb               late-bound Excel automation, line charts, CSV fallback
   AppIcon.vb                   loads the embedded icon for window title bars
+  AppHelp.vb                   F1: the topic for each window, and the Help menu
   RolePermissions.vb           the role capability matrix, derived from ClaimWorkflow
 Data/
   Db.vb                        OleDb wrapper, positional "?" params, typed nulls
@@ -524,6 +565,11 @@ Repositories/
   ReportRepository.vb          monthly aggregates for the two reports
 Forms/                         10 forms, each with a hand-written .Designer.vb
 Resources/                     the logo and the application icon, both embedded
+Help/
+  ClaimsManager.hhp            HTML Help Workshop project: options, window, file list
+  contents.hhc, index.hhk      the Contents tree and the keyword index
+  *.htm, help.css              one topic per file, and their stylesheet
+  BuildChm.vb                  MSBuild inline task that compiles the project to a .chm
 Installer/
   ClaimsManager.wxs            WiX authoring for the MSI
   build-msi.cmd                builds Release, then packages it

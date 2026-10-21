@@ -15,7 +15,7 @@
 
   <?define ProductName = "Claims Manager" ?>
   <?define Manufacturer = "Northbridge Assurance" ?>
-  <?define ProductVersion = "1.0.0.0" ?>
+  <?define ProductVersion = "1.1.0.0" ?>
 
   <!-- Fixed for the lifetime of the product. Changing it breaks upgrade detection. -->
   <?define UpgradeCode = "{C8E4A6F2-3B71-4D5E-9A0C-7F2E1D6B4A93}" ?>
@@ -31,7 +31,7 @@
     major upgrade, and MajorUpgrade above then removes the older build. Keeping one code
     across two versions would turn the second into a reinstall of the first.
   -->
-  <?define ProductCode = "{8AC2ECD5-CEC0-5248-A807-E9B326123C8A}" ?>
+  <?define ProductCode = "{C7782104-92E8-41CD-AEC4-1B4F46B8E184}" ?>
 
   <Package
       Name="$(ProductName)"
@@ -86,6 +86,7 @@
 
     <Feature Id="Main" Title="$(ProductName)" Level="1">
       <ComponentRef Id="ApplicationFiles" />
+      <ComponentRef Id="HelpFile" />
       <ComponentRef Id="InstallFolderWritable" />
     </Feature>
 
@@ -112,6 +113,14 @@
             Icon="ClaimsManagerIcon"
             Advertise="no" />
       </File>
+    </Component>
+    <!--
+      The F1 help file, compiled from Help\ by the project build. The application looks for
+      it beside the executable. A component of its own, keyed on the file, so the help can
+      change without disturbing the executable's component.
+    -->
+    <Component Id="HelpFile" Directory="INSTALLFOLDER">
+      <File Id="ClaimsManagerHelp" Source="bin\Release\ClaimsManager.chm" KeyPath="yes" />
     </Component>
     <!--
       The application keeps its database, document store and demo accounts file in its own

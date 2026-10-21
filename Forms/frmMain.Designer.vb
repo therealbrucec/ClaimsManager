@@ -40,6 +40,9 @@ Partial Class frmMain
         Me.mnuWindow = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuCloseAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHelpContents = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHelpIndex = New System.Windows.Forms.ToolStripMenuItem()
+        Me.sepHelp1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsMain = New System.Windows.Forms.ToolStrip()
         Me.tsNewClaim = New System.Windows.Forms.ToolStripButton()
@@ -186,10 +189,27 @@ Partial Class frmMain
         '
         'mnuHelp
         '
-        Me.mnuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuAbout})
+        Me.mnuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuHelpContents, Me.mnuHelpIndex, Me.sepHelp1, Me.mnuAbout})
         Me.mnuHelp.Name = "mnuHelp"
         Me.mnuHelp.Size = New System.Drawing.Size(44, 20)
         Me.mnuHelp.Text = "&Help"
+        '
+        'mnuHelpContents
+        '
+        Me.mnuHelpContents.Name = "mnuHelpContents"
+        Me.mnuHelpContents.Size = New System.Drawing.Size(180, 22)
+        Me.mnuHelpContents.Text = "&Contents"
+        '
+        'mnuHelpIndex
+        '
+        Me.mnuHelpIndex.Name = "mnuHelpIndex"
+        Me.mnuHelpIndex.Size = New System.Drawing.Size(180, 22)
+        Me.mnuHelpIndex.Text = "&Index"
+        '
+        'sepHelp1
+        '
+        Me.sepHelp1.Name = "sepHelp1"
+        Me.sepHelp1.Size = New System.Drawing.Size(177, 6)
         '
         'mnuAbout
         '
@@ -314,6 +334,9 @@ Partial Class frmMain
     Friend WithEvents mnuWindow As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuCloseAll As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuHelp As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mnuHelpContents As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents mnuHelpIndex As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents sepHelp1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents mnuAbout As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents tsMain As System.Windows.Forms.ToolStrip
     Friend WithEvents tsNewClaim As System.Windows.Forms.ToolStripButton

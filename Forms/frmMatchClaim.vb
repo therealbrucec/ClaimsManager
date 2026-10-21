@@ -21,6 +21,7 @@ Public Class frmMatchClaim
     Public Sub New(correspondenceId As Integer)
         InitializeComponent()
         UiStyle.ApplyTo(Me)
+        AppHelp.Attach(Me, AppHelp.NewOrExisting)
         UiStyle.StyleGrid(dgvCandidates)
         _correspondenceId = correspondenceId
     End Sub

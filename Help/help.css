@@ -1,0 +1,184 @@
+/* Northbridge Assurance Claims Manager Help.
+   Written for the HTML Help viewer, which renders with Internet Explorer's engine:
+   plain CSS2, no web fonts, nothing newer than the help format itself. */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #000000;
+    font-family: Verdana, Tahoma, Arial, sans-serif;
+    font-size: 70%;
+}
+
+/* The navy band across the top of every topic, matching the application's brand colour. */
+div.banner {
+    background: #102e58;
+    color: #ffffff;
+    padding: 6px 10px 7px 10px;
+    border-bottom: 3px solid #006cb4;
+}
+
+div.banner div.product {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 100%;
+    color: #a9c8e8;
+}
+
+div.banner h1 {
+    margin: 2px 0 0 0;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 175%;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+div.content {
+    padding: 4px 12px 12px 12px;
+}
+
+p, li, td, th, dd, dt {
+    line-height: 140%;
+}
+
+p {
+    margin: 8px 0 8px 0;
+}
+
+h2 {
+    margin: 16px 0 4px 0;
+    font-size: 125%;
+    color: #102e58;
+}
+
+/* "To record an inbound item" and its numbered steps: the procedure heading of the era. */
+h3.procedure {
+    margin: 14px 0 4px 0;
+    font-size: 110%;
+    color: #102e58;
+}
+
+h3.procedure span.arrow {
+    color: #006cb4;
+    font-family: Webdings;
+    font-weight: normal;
+}
+
+ol, ul {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+li {
+    margin-bottom: 3px;
+}
+
+a:link, a:visited {
+    color: #006cb4;
+}
+
+a:hover {
+    color: #c00000;
+}
+
+/* What appears on screen: a button, a menu, a box. */
+.ui {
+    font-weight: bold;
+}
+
+kbd {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 110%;
+}
+
+pre {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 110%;
+    background: #f3f3f3;
+    border: 1px solid #c0c0c0;
+    padding: 6px;
+}
+
+div.note, div.tip, div.important {
+    margin: 10px 0 10px 0;
+    padding: 5px 8px 5px 8px;
+    border: 1px solid #c0c0c0;
+    background: #f7f7ef;
+}
+
+div.important {
+    background: #fff4e0;
+    border-color: #e0b060;
+}
+
+div.note b, div.tip b, div.important b {
+    color: #102e58;
+}
+
+table.grid {
+    border-collapse: collapse;
+    margin: 6px 0 10px 0;
+    font-size: 100%;
+}
+
+table.grid th {
+    background: #d4d0c8;
+    border: 1px solid #808080;
+    padding: 3px 6px 3px 6px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+table.grid td {
+    border: 1px solid #a0a0a0;
+    padding: 3px 6px 3px 6px;
+    vertical-align: top;
+}
+
+table.grid td.yes {
+    text-align: center;
+    color: #006000;
+    font-weight: bold;
+}
+
+table.grid td.no {
+    text-align: center;
+    color: #a0a0a0;
+}
+
+dl.terms dt {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #102e58;
+}
+
+dl.terms dd {
+    margin-left: 18px;
+}
+
+h4.related {
+    margin: 18px 0 4px 0;
+    padding-top: 6px;
+    border-top: 1px solid #c0c0c0;
+    font-size: 100%;
+    color: #102e58;
+}
+
+ul.related {
+    margin-top: 2px;
+    list-style-type: square;
+}
+
+div.footer {
+    margin: 0 12px 10px 12px;
+    padding-top: 4px;
+    border-top: 1px solid #e0e0e0;
+    color: #808080;
+    font-size: 90%;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Status changes reference</title>
+<link rel="stylesheet" type="text/css" href="help.css">
+</head>
+<body>
+<div class="banner">
+<div class="product">Northbridge Assurance Claims Manager</div>
+<h1>Status changes reference</h1>
+</div>
+<div class="content">
+
+<p>Every move a claim can make, as it appears on the <span class="ui">Move claim on</span> menu.
+A move not listed here cannot be made. H = Handler, A = Adjuster, S = Supervisor.</p>
+
+<table class="grid">
+<tr><th>From</th><th>Menu command</th><th>To</th><th>Who</th><th>Reason</th></tr>
+<tr><td rowspan="3">Notified</td><td>Request further documents</td><td>Documents Pending</td><td>H, S</td><td>Required</td></tr>
+<tr><td>Refer to loss adjuster</td><td>With Adjuster</td><td>H, S</td><td>Optional</td></tr>
+<tr><td>Withdraw claim</td><td>Withdrawn</td><td>H, S</td><td>Required</td></tr>
+<tr><td rowspan="2">Documents Pending</td><td>Refer to loss adjuster</td><td>With Adjuster</td><td>H, S</td><td>Optional</td></tr>
+<tr><td>Withdraw claim</td><td>Withdrawn</td><td>H, S</td><td>Required</td></tr>
+<tr><td rowspan="3">With Adjuster</td><td>Approve claim</td><td>Adjuster Approved</td><td>A, S</td><td>Required</td></tr>
+<tr><td>Reject claim</td><td>Adjuster Rejected</td><td>A, S</td><td>Required</td></tr>
+<tr><td>Refer back for more information</td><td>Referred For Info</td><td>A, S</td><td>Required</td></tr>
+<tr><td rowspan="2">Referred For Info</td><td>Return to adjuster</td><td>With Adjuster</td><td>H, S</td><td>Optional</td></tr>
+<tr><td>Withdraw claim</td><td>Withdrawn</td><td>H, S</td><td>Required</td></tr>
+<tr><td rowspan="2">Adjuster Approved</td><td>Send to underwriter</td><td>Sent To Underwriter</td><td>H, S</td><td>Optional</td></tr>
+<tr><td>Send back to adjuster</td><td>With Adjuster</td><td>S</td><td>Required</td></tr>
+<tr><td rowspan="2">Adjuster Rejected</td><td>Close claim</td><td>Closed</td><td>H, S</td><td>Required</td></tr>
+<tr><td>Reopen with adjuster</td><td>With Adjuster</td><td>S</td><td>Required</td></tr>
+<tr><td rowspan="2">Sent To Underwriter</td><td>Record underwriter agreement</td><td>Underwriter Agreed</td><td>H, S</td><td>Optional</td></tr>
+<tr><td>Record underwriter decline</td><td>Underwriter Declined</td><td>H, S</td><td>Required</td></tr>
+<tr><td>Underwriter Agreed</td><td>Record settlement</td><td>Settled</td><td>H, S</td><td>Optional</td></tr>
+<tr><td rowspan="2">Underwriter Declined</td><td>Close claim</td><td>Closed</td><td>H, S</td><td>Optional</td></tr>
+<tr><td>Reopen with adjuster</td><td>With Adjuster</td><td>S</td><td>Required</td></tr>
+<tr><td>Settled</td><td>Close claim</td><td>Closed</td><td>H, S</td><td>Optional</td></tr>
+<tr><td>Closed</td><td colspan="4">None. The claim is finished.</td></tr>
+<tr><td>Withdrawn</td><td colspan="4">None. The claim is finished.</td></tr>
+</table>
+
+<p>Three of these moves also check that the claim is ready: referring to an adjuster (including
+returning or reopening to one), sending to the underwriter, and recording settlement. See
+<a href="guards.htm">Before a claim can move on</a>.</p>
+
+<h4 class="related">Related topics</h4>
+<ul class="related">
+<li><a href="moving-a-claim.htm">Moving a claim on</a></li>
+<li><a href="workflow.htm">Claim statuses</a></li>
+<li><a href="roles.htm">Roles and what they may do</a></li>
+</ul>
+
+</div>
+<div class="footer">Northbridge Assurance Claims Manager Help</div>
+</body>
+</html>

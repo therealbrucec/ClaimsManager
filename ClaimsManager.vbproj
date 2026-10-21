@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.vb" />
+    <Compile Include="Core\AppHelp.vb" />
     <Compile Include="Core\AppIcon.vb" />
     <Compile Include="Core\ClaimWorkflow.vb" />
     <Compile Include="Core\Config.vb" />
@@ -158,5 +159,33 @@
     <None Include=".gitignore" />
     <None Include="Tests\*.md" />
   </ItemGroup>
+  <!-- The F1 help file. Help\ is an ordinary HTML Help Workshop project; Help\BuildChm.vb
+       compiles it into ClaimsManager.chm beside the executable after every build. That file
+       is build tooling run by MSBuild, not part of the application, so it has no Compile
+       entry and must never be given one. -->
+  <ItemGroup>
+    <HelpSource Include="Help\ClaimsManager.hhp" />
+    <HelpSource Include="Help\contents.hhc" />
+    <HelpSource Include="Help\index.hhk" />
+    <HelpSource Include="Help\help.css" />
+    <HelpSource Include="Help\*.htm" />
+    <None Include="@(HelpSource)" />
+    <None Include="Help\BuildChm.vb" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <UsingTask TaskName="BuildChm" TaskFactory="RoslynCodeTaskFactory"
+             AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+    <Task>
+      <Code Type="Class" Language="vb" Source="$(MSBuildProjectDirectory)\Help\BuildChm.vb" />
+    </Task>
+  </UsingTask>
+  <Target Name="BuildHelpFile" AfterTargets="Build"
+          Inputs="@(HelpSource);$(MSBuildProjectDirectory)\Help\BuildChm.vb"
+          Outputs="$(TargetDir)ClaimsManager.chm">
+    <BuildChm ProjectFile="$(MSBuildProjectDirectory)\Help\ClaimsManager.hhp"
+              OutputFile="$(TargetDir)ClaimsManager.chm" />
+    <ItemGroup>
+      <FileWrites Include="$(TargetDir)ClaimsManager.chm" />
+    </ItemGroup>
+  </Target>
 </Project>

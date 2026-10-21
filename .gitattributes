@@ -10,10 +10,18 @@
 
 *.md      text eol=lf
 
+# HTML Help Workshop sources, kept in the line endings Workshop itself writes.
+*.hhp     text eol=crlf
+*.hhc     text eol=crlf
+*.hhk     text eol=crlf
+*.htm     text eol=crlf
+*.css     text eol=crlf
+
 *.ico  binary
 *.png  binary
 *.jpg  binary
 *.mdb  binary
 *.msi  binary
+*.chm  binary
 *.xlsx binary
 *.pptx binary

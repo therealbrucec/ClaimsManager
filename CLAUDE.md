@@ -97,6 +97,27 @@ Grid column headings come from **SQL `AS [Friendly Name]` aliases**, not designe
 That is why the repositories' SELECT lists read the way they do, and why renaming an alias
 breaks the code that reads `Cells("...")`.
 
+## The help file
+
+F1 opens `ClaimsManager.chm`, compiled from the HTML Help Workshop project in `Help\` by
+`Help\BuildChm.vb`, an MSBuild inline task (RoslynCodeTaskFactory) that the vbproj runs after
+every build. **`BuildChm.vb` is build tooling and must never get a `<Compile>` entry.** It
+compiles without the VB runtime, so no `ChrW`, and no `=` or `Select Case` on strings: use
+`String.Equals`.
+
+- **Each form calls `AppHelp.Attach(Me, topic)`** beside `UiStyle.ApplyTo(Me)`. Topic names
+  are the `.htm` file names, held as constants in `Core\AppHelp.vb`. Do the same for any new form.
+- **The topics restate the rules.** `transitions.htm`, `roles.htm` and `guards.htm` mirror
+  `ClaimWorkflow`; change them together.
+- **Sitemaps (`.hhc`, `.hhk`) must keep Workshop's multi-line layout and stay ASCII.** The
+  viewer showed an empty Contents tree for the same sitemap written on one line.
+- **The container quirks were found against the real viewer**, and each is commented in
+  `BuildChm.vb`: the last LZX frame is padded to a full 32K (otherwise hh.exe and 7-Zip both
+  fail on the final frame), and `#WINDOWS` entries are 0xC4 bytes (0x188 makes the viewer
+  refuse the whole file).
+- To check a build: `7z t bin\Release\ClaimsManager.chm` decodes every stream, and
+  `hh.exe -decompile <folder> <chm>` extracts through Windows' own reader.
+
 ## The installer
 
 `Installer\ClaimsManager.wxs`, built by `Installer\build-msi.cmd`. **No WiX extensions are

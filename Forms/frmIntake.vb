@@ -27,6 +27,7 @@ Public Class frmIntake
     Public Sub New(claimId As Integer?, claimRef As String)
         InitializeComponent()
         UiStyle.ApplyTo(Me)
+        AppHelp.Attach(Me, AppHelp.RecordInbound)
 
         _claimId = claimId
         _claimRef = If(claimRef, String.Empty)

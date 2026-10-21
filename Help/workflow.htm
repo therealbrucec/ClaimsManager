@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Claim statuses</title>
+<link rel="stylesheet" type="text/css" href="help.css">
+</head>
+<body>
+<div class="banner">
+<div class="product">Northbridge Assurance Claims Manager</div>
+<h1>Claim statuses</h1>
+</div>
+<div class="content">
+
+<p>Every claim has a status, shown in the header of the claim window and in every claim list. The
+status says where the claim has got to and whose move it is next. There are twelve.</p>
+
+<h2>The usual path</h2>
+<p>Notified &rarr; (Documents Pending) &rarr; With Adjuster &rarr; Adjuster Approved &rarr; Sent
+To Underwriter &rarr; Underwriter Agreed &rarr; Settled &rarr; Closed</p>
+
+<h2>All statuses</h2>
+<table class="grid">
+<tr><th>Status</th><th>Meaning</th><th>Next move by</th></tr>
+<tr><td>Notified</td><td>The loss has been reported and a claim opened.</td><td>Handler</td></tr>
+<tr><td>Documents Pending</td><td>Waiting for the insured to send something.</td><td>Handler</td></tr>
+<tr><td>With Adjuster</td><td>A loss adjuster is reviewing the claim.</td><td>Adjuster</td></tr>
+<tr><td>Referred For Info</td><td>The adjuster has asked the handler for more.</td><td>Handler</td></tr>
+<tr><td>Adjuster Approved</td><td>The adjuster supports the claim.</td><td>Handler</td></tr>
+<tr><td>Adjuster Rejected</td><td>The adjuster does not support the claim.</td><td>Handler, to close
+it</td></tr>
+<tr><td>Sent To Underwriter</td><td>Submitted to the underwriter for a decision.</td><td>Handler,
+when the reply comes</td></tr>
+<tr><td>Underwriter Agreed</td><td>The underwriter will pay.</td><td>Handler</td></tr>
+<tr><td>Underwriter Declined</td><td>The underwriter will not pay.</td><td>Handler, to close
+it</td></tr>
+<tr><td>Settled</td><td>Paid.</td><td>Handler, to close it</td></tr>
+<tr><td>Closed</td><td>Finished. No further moves.</td><td>&ndash;</td></tr>
+<tr><td>Withdrawn</td><td>The insured withdrew the claim. No further moves.</td><td>&ndash;</td></tr>
+</table>
+
+<p>Closed and Withdrawn are final. A supervisor can reopen a claim at Adjuster Rejected or
+Underwriter Declined by sending it back to the adjuster, but once a claim is closed or withdrawn
+it stays that way.</p>
+
+<h2>Changing status</h2>
+<p>A claim's status is changed only with <span class="ui">Move claim on</span> in the claim
+window. The moves offered depend on the current status and on your role, and some need a
+written reason. See:</p>
+<ul>
+<li><a href="moving-a-claim.htm">Moving a claim on</a>, for how;</li>
+<li><a href="transitions.htm">Status changes reference</a>, for every move and who may make it;</li>
+<li><a href="guards.htm">Before a claim can move on</a>, for the checks made first.</li>
+</ul>
+
+<h4 class="related">Related topics</h4>
+<ul class="related">
+<li><a href="claim-lists.htm">Finding a claim</a></li>
+<li><a href="roles.htm">Roles and what they may do</a></li>
+</ul>
+
+</div>
+<div class="footer">Northbridge Assurance Claims Manager Help</div>
+</body>
+</html>

@@ -7,6 +7,7 @@ Public Class frmUnmatched
     Public Sub New()
         InitializeComponent()
         UiStyle.ApplyTo(Me)
+        AppHelp.Attach(Me, AppHelp.IntakeQueue)
         UiStyle.StyleGrid(dgvQueue)
         txtPreview.Font = UiStyle.MonoFont
     End Sub

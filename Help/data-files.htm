@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Where your data is kept</title>
+<link rel="stylesheet" type="text/css" href="help.css">
+</head>
+<body>
+<div class="banner">
+<div class="product">Northbridge Assurance Claims Manager</div>
+<h1>Where your data is kept</h1>
+</div>
+<div class="content">
+
+<p>Claims Manager keeps everything in the same folder as the program itself. Nothing is written to
+your user profile. When installed, that folder is:</p>
+<pre>C:\Program Files (x86)\Northbridge Assurance\Claims Manager</pre>
+<p>To see the exact paths on your computer, click <span class="ui">About</span> on the
+<span class="ui">Help</span> menu.</p>
+
+<table class="grid">
+<tr><th>File or folder</th><th>What it is</th></tr>
+<tr><td><code>Claims.mdb</code></td><td>The database: claims, inbound items, notes, payments,
+history and the audit trail. Created the first time the program runs.</td></tr>
+<tr><td><code>Documents\</code></td><td>The document store. One folder per claim reference holds
+the files attached to that claim. Items still in the intake queue have their files kept here
+until they are filed.</td></tr>
+<tr><td><code>demo-accounts.csv</code></td><td>The sign-in details for this demonstration build,
+and what each role may do.</td></tr>
+<tr><td><code>ClaimsManager.chm</code></td><td>This help file.</td></tr>
+</table>
+
+<p>Because everything is in one folder, every person who uses Claims Manager on the computer
+shares the same claims.</p>
+
+<h2>Demonstration data</h2>
+<p>The first time it runs, Claims Manager fills the database with a year of invented claims, with
+their payments, history and correspondence, and a few items waiting in the intake queue. The same
+claims are produced every time, so two demonstrations start from exactly the same book.</p>
+
+<h3 class="procedure"><span class="arrow">4</span> To start again with a fresh book</h3>
+<ol>
+<li>Exit Claims Manager.</li>
+<li>In the program folder, delete <code>Claims.mdb</code> and the <code>Documents</code>
+folder.</li>
+<li>Start Claims Manager. It builds a new database, which takes a few seconds.</li>
+</ol>
+
+<div class="important"><b>Important</b>&nbsp; Uninstalling Claims Manager removes the program but
+leaves the database, the documents and the sign-in file, because they were created by running it.
+Delete the folder afterwards to remove them.</div>
+
+<h4 class="related">Related topics</h4>
+<ul class="related">
+<li><a href="troubleshooting.htm">Troubleshooting</a></li>
+<li><a href="claim-documents.htm">Documents tab</a></li>
+</ul>
+
+</div>
+<div class="footer">Northbridge Assurance Claims Manager Help</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Troubleshooting</title>
+<link rel="stylesheet" type="text/css" href="help.css">
+</head>
+<body>
+<div class="banner">
+<div class="product">Northbridge Assurance Claims Manager</div>
+<h1>Troubleshooting</h1>
+</div>
+<div class="content">
+
+<h2>Claims Manager cannot start: the folder cannot be written to</h2>
+<p>Claims Manager keeps its database beside the program, so it must be able to write to that
+folder. The installer arranges this. If you are running a copy from somewhere read-only, such as
+a network share or a CD, copy the whole folder to your Desktop or Documents and run it from
+there.</p>
+
+<h2>The Jet 4.0 database provider is not available</h2>
+<p>The database is reached through the Microsoft Jet 4.0 provider, which is part of Windows but
+exists only for 32-bit programs. The message means Claims Manager has been run as a 64-bit
+process. Reinstall it from the Northbridge Assurance installer, which installs the 32-bit
+build.</p>
+
+<h2>No users are set up in the database</h2>
+<p>The database was not built completely, perhaps because the program was closed during its first
+start. Exit Claims Manager, delete <code>Claims.mdb</code> from the program folder and start it
+again. See <a href="data-files.htm">Where your data is kept</a>.</p>
+
+<h2>A report produces a CSV file and no chart</h2>
+<p>Excel could not be started. The charts are drawn by Excel, so it must be installed on the
+computer. See <a href="reports.htm">Exporting reports</a>.</p>
+
+<h2>A document will not open</h2>
+<p>Documents open in whichever program Windows uses for that type of file. If Windows asks which
+program to use, no program on the computer handles that type. If Claims Manager says the file
+cannot be found, it has been moved or deleted from the <code>Documents</code> folder outside
+Claims Manager.</p>
+
+<h2>Help opens, but the topics say the page cannot be displayed</h2>
+<p>Windows will not show help pages from a help file it does not trust: one opened from a network
+share, or one that arrived in a download or a zip file. Copy Claims Manager to the local disk. If
+the help file was downloaded, right-click <code>ClaimsManager.chm</code>, click
+<span class="ui">Properties</span>, tick <span class="ui">Unblock</span> and click
+<span class="ui">OK</span>.</p>
+
+<h2>Pressing F1 says the help file is missing</h2>
+<p><code>ClaimsManager.chm</code> should be in the same folder as the program. Reinstall Claims
+Manager to put it back.</p>
+
+<h4 class="related">Related topics</h4>
+<ul class="related">
+<li><a href="data-files.htm">Where your data is kept</a></li>
+<li><a href="signing-in.htm">Signing in</a></li>
+</ul>
+
+</div>
+<div class="footer">Northbridge Assurance Claims Manager Help</div>
+</body>
+</html>
